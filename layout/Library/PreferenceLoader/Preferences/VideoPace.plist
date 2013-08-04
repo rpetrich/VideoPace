@@ -1,0 +1,51 @@
+entry = {
+  icon = "/System/Library/PreferenceBundles/VideoSettings.bundle/icon.png";
+  label = VideoPace;
+  cell = PSLinkCell;
+};
+title = VideoPace;
+items = (
+  {
+    cell = PSLinkListCell;
+    detail = PSListItemsController;
+    default = 1.3;
+    defaults = "com.rpetrich.videopace";
+    key = VPRateFactor;
+    label = "Factor";
+    PostNotification = "com.rpetrich.videopace.settingschanged";
+    validValues = (
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0,
+      1.1,
+      1.2,
+      1.3,
+      1.4,
+      1.5,
+      1.75,
+      2
+    );
+    validTitles = (
+      "50% Slower",
+      "40% Slower",
+      "30% Slower",
+      "20% Slower",
+      "10% Slower",
+      "Normal Speed",
+      "10% Faster",
+      "20% Faster",
+      "30% Faster",
+      "40% Faster",
+      "50% Faster",
+      "75% Faster",
+      "100% Faster"
+    );
+  },
+  {
+    cell = PSGroupCell;
+    footerText = "© 2013 Ryan Petrich";
+  }
+);
