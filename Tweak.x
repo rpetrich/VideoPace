@@ -42,8 +42,13 @@ static void PrepareSettings(void)
 {
 	if (!settingsArePrepared) {
 		NSDictionary *settings = ReadSettings();
-		id temp = [settings objectForKey:@"VPRateFactor"];
-		rateFactor = temp ? [temp floatValue] : 1.3f;
+		id temp = [settings objectForKey:[NSString stringWithFormat:@"VPEnabled-%@", [NSBundle mainBundle].bundleIdentifier]];
+		if (!temp || [temp boolValue]) {
+			temp = [settings objectForKey:@"VPRateFactor"];
+			rateFactor = temp ? [temp floatValue] : 1.3f;
+		} else {
+			rateFactor = 1.0f;
+		}
 		inverseRateFactor = 1.0f / rateFactor;
 		settingsArePrepared = YES;
 	}

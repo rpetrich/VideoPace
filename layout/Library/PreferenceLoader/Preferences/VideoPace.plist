@@ -45,6 +45,17 @@ items = (
     );
   },
   {
+    bundle = AppList;
+    cell = PSLinkCell;
+    isController = 1;
+    label = "Enabled Applications";
+    ALSettingsPath = "/var/mobile/Library/Preferences/com.rpetrich.videopace.plist";
+    ALSettingsKeyPrefix = "VPEnabled-";
+    ALChangeNotification = "com.rpetrich.videopace.settingschanged";
+    ALSettingsDefaultValue = 1;
+    ALAllowsSelection = 1;
+  },
+  {
     cell = PSGroupCell;
     footerText = "© 2013 Ryan Petrich";
   }
