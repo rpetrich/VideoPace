@@ -2,7 +2,7 @@ Package: com.rpetrich.videopace
 Priority: optional
 Section: Tweaks
 Architecture: iphoneos-arm
-Version: 1.0.1
+Version: 1.1
 Description: Increase speed of video playback
 Name: VideoPace
 Depends: firmware (>= 4.3), mobilesubstrate (>= 0.9.5000), preferenceloader (>= 2.2.2), applist, com.rpetrich.rocketbootstrap (>= 1.0.2) | firmware (<< 8.0)
