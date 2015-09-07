@@ -1,5 +1,5 @@
 entry = {
-  icon = "/System/Library/PreferenceBundles/VideoSettings.bundle/icon.png";
+  icon = "/Library/PreferenceLoader/Preferences/VideoPace.png";
   label = VideoPace;
   cell = PSLinkCell;
 };
