@@ -84,7 +84,7 @@ static void machPortCallback(CFMachPortRef port, void *bytes, CFIndex size, void
 %ctor {
 	%init();
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (void *)InvalidateSettings, CFSTR("com.rpetrich.videopace.settingschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-	if (kCFCoreFoundationVersionNumber > 1000) {
+	if (kCFCoreFoundationVersionNumber > 1000 && objc_getClass("SpringBoard")) {
 		kern_return_t err = LMStartService(connection.serverName, CFRunLoopGetCurrent(), machPortCallback);
 		if (err) {
 			NSLog(@"VideoPace: Unable to register mach server with error %x", err);
